@@ -1,0 +1,41 @@
+﻿@model DateViewModel;
+
+@{
+    ViewBag.Title = "Day Summary";
+}
+<div class="container">
+    <form asp-controller="Home" asp-action="Create" method="post">
+        <div class="row">
+            <h5 class="text-center">Select your DATE for your Check List!</h5>
+            <input class="col-sm-* text-center" asp-for="DateTime" />
+        </div>
+        <div class="row justify-content-md-center">
+            <h5 class="text-center">Write down your SCHEDULE for the day!</h5>
+            <div class="col-md-3">
+                <input type="text" asp-for="ScheduleItems" />
+                <input type="text" asp-for="ScheduleItems" />
+                <input type="text" asp-for="ScheduleItems" />
+                <input type="text" asp-for="ScheduleItems" />
+                <input type="text" asp-for="ScheduleItems" />
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <h5 class="text-center">Write down your GOALS for the day!</h5>
+            <div class="col-md-3">
+                <input type="text" placeholder="Goal 1" asp-for="GoalItems" />
+                <input type="text" placeholder="Goal 2" asp-for="GoalItems" />
+                <input type="text" placeholder="Goal 3" asp-for="GoalItems" />
+            </div>
+        </div>
+        <div class="row">
+            <h5 class="text-center">Write down your MOTIVATION speech for the day to keep you strong!</h5>
+            <textarea class="form-control h-100 d-inline-block" asp-for="Motivaton"></textarea>
+        </div>
+        <div class="row mt-5">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Add</button>
+        </div>
+    </form>
+</div>
+
+
+

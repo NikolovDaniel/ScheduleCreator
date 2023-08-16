@@ -1,0 +1,44 @@
+﻿@model DateAndItemsViewModel;
+
+<div class="row justify-content-md-center">
+    <h5 class="text-center">Schedule for the day:</h5>
+    <div class="col-md-3">
+        @foreach (var item in Model.ScheduleItems)
+        {
+            <div class="form-check">
+                @if (item.IsFinished)
+                {
+                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                }
+                else
+                {
+                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
+                }
+                <input class="form-check-label" value="@item.Content">
+            </div>
+        }
+    </div>
+</div>
+<div class="row justify-content-md-center">
+    <h5 class="text-center">Goals for the day:</h5>
+    <div class="col-md-3">
+        @foreach (var item in Model.GoalItems)
+        {
+            <div class="form-check">
+                @if (item.IsFinished)
+                {
+                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                }
+                else
+                {
+                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
+                }
+                <input class="form-check-label" value="@item.Content">
+            </div>
+        }
+    </div>
+</div>
+<div class="row">
+    <h5 class="text-center">Motivation for the day:</h5>
+    <textarea class="form-control h-100 d-inline-block">@Model.Motivaton.Content</textarea>
+</div>
